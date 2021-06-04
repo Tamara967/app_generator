@@ -19,7 +19,7 @@ def get_current_time():
 
 
 def get_end_user_app_page_link():
-    return "http://35.234.81.128/aiNIwXlLE1Dw7P2k6K78/login"
+    return "http://35.234.81.128/yYXAVOIZfwXLhP0qJToR/login"
 
 
 #test_user_application_activities_copy_activity.py
