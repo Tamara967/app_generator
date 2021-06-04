@@ -14,6 +14,7 @@ from test_activities_archive_completed_activity import *
 from test_user_appliction_send_to_with_select_review import *
 from test_user_appliction_send_to_with_invite_review import *
 from test_user_appliction_delete_activites import *
+from test_user_application_view_and_edit_activity import *
 from config import *
 import time
 
@@ -455,6 +456,28 @@ def case_user_app_8(user_app_page_link):
         test_user_application_delete_activity_page.click_ok_button()
         time.sleep(10) 
 
+def case_user_app_9(user_app_page_link):
+        test_user_application_view_and_edit_activity = TestUserAplicatioViewAndEditActivitesPage(webdriver.Chrome(), user_app_page_link)
+        test_user_application_view_and_edit_activity.go_to_site()
+        test_user_application_view_and_edit_activity.send_login()
+        test_user_application_view_and_edit_activity.send_password()
+        test_user_application_view_and_edit_activity.click_on_the_login_button()
+        time.sleep(5)
+        test_user_application_view_and_edit_activity.click_activity_button()
+        time.sleep(10)
+        test_user_application_view_and_edit_activity.click_on_the_edit_icon()
+        time.sleep(5)
+        test_user_application_view_and_edit_activity.fill_feild()
+        time.sleep(5)
+        test_user_application_view_and_edit_activity.find_elements()
+        time.sleep(7)
+        test_user_application_view_and_edit_activity.click_on_the_button_save()
+        time.sleep(5)
+        test_user_application_view_and_edit_activity.click_on_the_generate()
+        time.sleep(5)
+        test_user_application_view_and_edit_activity.assert_geterate_successful()
+        time.sleep(10)
+
 page_link = get_page_link()
 user_app_page_link = get_end_user_app_page_link()
 #case_1(page_link)
@@ -472,6 +495,6 @@ user_app_page_link = get_end_user_app_page_link()
 #case_user_app_5(user_app_page_link)
 #case_user_app_6(user_app_page_link)
 #case_user_app_7(user_app_page_link)
-case_user_app_8(user_app_page_link)
-
+#case_user_app_8(user_app_page_link)
+case_user_app_9(user_app_page_link)
 
